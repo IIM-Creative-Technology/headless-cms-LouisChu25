@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_types",
+  "info": {
+    "singularName": "project-type",
+    "pluralName": "project-types",
+    "displayName": "projectType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "projecttypeimg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "projets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::projet.projet",
+      "mappedBy": "project_type"
+    }
+  }
+}
